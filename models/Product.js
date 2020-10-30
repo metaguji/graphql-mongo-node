@@ -8,3 +8,6 @@ const productSchema = new Schema({
 });
 
 export default mongoose.model('Product', productSchema);
+
+
+
