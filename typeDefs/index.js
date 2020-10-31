@@ -9,9 +9,16 @@ export const typeDefs = gql`
   }
   type Query {
     products: [Product!]!
-    getProduct(id: ID!): Product!
+    getProduct(id: ID!): Product
   }
   type Mutation {
-    newProduct(name: String!, description: String!, price: Float!): Product
+    newProduct(name: String!, description: String!, price: Float!): Product!
+    editProduct(
+      id: ID!
+      name: String!
+      description: String!
+      price: Float!
+    ): Product
+    deleteProduct(id: ID!): Product
   }
 `;
